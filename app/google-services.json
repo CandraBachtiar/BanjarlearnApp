@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869804918246",
+    "project_id": "banjarlearn",
+    "storage_bucket": "banjarlearn.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869804918246:android:33547e4ebcba2f618c4227",
+        "android_client_info": {
+          "package_name": "com.example.banjarlearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChgDQ424N7tSHYrVfpLjNZ_v-oBnD2DmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
