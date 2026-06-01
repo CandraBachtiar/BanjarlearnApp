@@ -1,9 +1,10 @@
-package com.example.banjarlearn
+package com.example.banjarlearn.home
 
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.banjarlearn.R
 
 class MainActivity : AppCompatActivity() {
 

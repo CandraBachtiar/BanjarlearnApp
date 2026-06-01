@@ -1,4 +1,4 @@
-package com.example.banjarlearn
+package com.example.banjarlearn.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.banjarlearn.home.MainActivity
+import com.example.banjarlearn.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
