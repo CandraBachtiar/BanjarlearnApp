@@ -2,20 +2,23 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FF"
+    android:background="@drawable/bg_splash_gradient"
     android:fillViewport="true"
     android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="28dp">
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="36dp">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:contentDescription="Logo Banjarlearn"
             android:src="@drawable/logo" />
 
@@ -24,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:text="Banjarlearn"
-            android:textColor="#2457FF"
+            android:textColor="#FFFFFF"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -33,29 +36,48 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="Masuk untuk mulai belajar bahasa, sejarah, dan budaya Banjar"
-            android:textColor="#6B7280"
+            android:lineSpacingExtra="3dp"
+            android:text="Belajar bahasa, budaya, dan kesenian Banjar dengan mudah"
+            android:textColor="#F3F7EA"
             android:textSize="13sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:background="@drawable/bg_white_round"
+            android:background="@drawable/bg_card_soft"
+            android:elevation="6dp"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="22dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masuk Akun"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Silakan login untuk melanjutkan belajar"
+                android:textColor="#000000"
+                android:textSize="13sp" />
 
             <EditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:background="@drawable/bg_light_blue_round"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_input_soft"
                 android:hint="Nama lengkap untuk daftar"
                 android:inputType="textPersonName"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textColor="#111827"
-                android:textColorHint="#9CA3AF"
+                android:textColor="#1F2937"
+                android:textColorHint="#7C8A6A"
                 android:textSize="14sp" />
 
             <EditText
@@ -63,13 +85,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/bg_light_blue_round"
+                android:background="@drawable/bg_input_soft"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textColor="#111827"
-                android:textColorHint="#9CA3AF"
+                android:textColor="#1F2937"
+                android:textColorHint="#7C8A6A"
                 android:textSize="14sp" />
 
             <EditText
@@ -77,22 +99,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/bg_light_blue_round"
+                android:background="@drawable/bg_input_soft"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textColor="#111827"
-                android:textColorHint="#9CA3AF"
+                android:textColor="#1F2937"
+                android:textColorHint="#7C8A6A"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#2457FF"
-                android:text="Login"
+                android:layout_marginTop="22dp"
+                android:backgroundTint="#F5B400"
+                android:text="LOGIN"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -102,9 +124,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#111827"
-                android:text="Daftar Akun"
-                android:textColor="#FFFFFF"
+                android:backgroundTint="#F5B400"
+                android:text="DAFTAR AKUN"
+                android:textColor="#ffff"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -114,7 +136,7 @@
                 android:layout_height="36dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="18dp"
-                android:indeterminateTint="#2457FF" />
+                android:indeterminateTint="#F97316" />
 
         </LinearLayout>
 

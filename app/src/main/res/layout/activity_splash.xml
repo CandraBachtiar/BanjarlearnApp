@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:text="Banjarlearn"
-        android:textColor="#17324D"
+        android:textColor="#ffff"
         android:textSize="35sp"
         android:textStyle="bold" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Belajar Bahasa dan Budaya Banjar"
-        android:textColor="#2F4F66"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         android:textStyle="bold"/>
 
