@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FF"
+    android:padding="22dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_white_round"
+            android:gravity="center"
+            android:text="←"
+            android:textColor="#111827"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Cerita Rakyat Banjar"
+            android:textColor="#111827"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Kumpulan kisah rakyat, legenda, dan budaya Banjar."
+            android:textColor="#6B7280"
+            android:textSize="14sp" />
+
+        <!-- Card 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_white_round"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_light_blue_round"
+                android:gravity="center"
+                android:text="👑"
+                android:textSize="54sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Putri Junjung Buih"
+                android:textColor="#111827"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Legenda tentang tokoh perempuan yang dikenal dalam cerita rakyat dan sejarah budaya Banjar."
+                android:textColor="#6B7280"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnCerita1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#2457FF"
+                android:text="Baca Cerita"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Card 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_round"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_light_blue_round"
+                android:gravity="center"
+                android:text="🕌"
+                android:textSize="54sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Datu Sanggul"
+                android:textColor="#111827"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Kisah tentang ulama dan tokoh masyarakat Banjar yang dikenal memiliki nilai religius dan keteladanan."
+                android:textColor="#6B7280"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnCerita2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#2457FF"
+                android:text="Baca Cerita"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Card 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_white_round"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_light_blue_round"
+                android:gravity="center"
+                android:text="🏞️"
+                android:textSize="54sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Legenda Sungai Barito"
+                android:textColor="#111827"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Cerita yang berkaitan dengan kehidupan masyarakat Banjar dan sungai sebagai bagian penting dari budaya."
+                android:textColor="#6B7280"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnCerita3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#2457FF"
+                android:text="Baca Cerita"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

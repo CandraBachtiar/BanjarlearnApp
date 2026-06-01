@@ -24,6 +24,24 @@
             android:name=".materi.MateriActivity"
             android:exported="false" />
         <activity
+            android:name=".materi.KosakataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".materi.CeritaRakyatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".materi.CeritaDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".materi.KesenianActivity"
+            android:exported="false" />
+        <activity
+            android:name=".materi.KesenianDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".materi.MateriDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".home.HomeActivity"
             android:exported="false" />
         <activity
