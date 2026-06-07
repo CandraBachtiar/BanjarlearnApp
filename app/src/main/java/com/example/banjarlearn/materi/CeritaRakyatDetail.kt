@@ -22,8 +22,8 @@ class CeritaRakyatDetail : AppCompatActivity() {
         tvIsiCerita = findViewById(R.id.tvIsiCerita)
         imgCerita = findViewById(R.id.imgCerita)
 
-        val judul = intent.getStringExtra("judul") ?: ""
-        val isi = intent.getStringExtra("isi") ?: ""
+        val judul = intent.getStringExtra("judul") ?: "Cerita Rakyat Banjar"
+        val isi = intent.getStringExtra("isi") ?: "Isi cerita belum tersedia."
         val gambar = intent.getIntExtra(
             "gambar",
             R.drawable.putri_junjung_buih
