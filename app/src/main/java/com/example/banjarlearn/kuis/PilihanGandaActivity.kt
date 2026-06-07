@@ -227,6 +227,7 @@ class PilihanGandaActivity : AppCompatActivity() {
 
         if (jawabanUser == soalKuis[indexSoal].jawabanBenar) {
             skor++
+            simpanKosakata(soalKuis[indexSoal])
         }
 
         if (indexSoal < soalKuis.size - 1) {
@@ -235,6 +236,28 @@ class PilihanGandaActivity : AppCompatActivity() {
         } else {
             selesaiKuis()
         }
+    }
+    private fun simpanKosakata(soal: Soal) {
+        val prefs = getSharedPreferences("kosakata_user", MODE_PRIVATE)
+
+        val dataLama = prefs.getStringSet("daftarKosakata", emptySet()) ?: emptySet()
+        val dataBaru = dataLama.toMutableSet()
+
+        val kata = ambilKataDariPertanyaan(soal.pertanyaan)
+        val arti = soal.opsi[soal.jawabanBenar]
+
+        if (kata.isNotEmpty()) {
+            dataBaru.add("$kata|$arti")
+        }
+
+        prefs.edit()
+            .putStringSet("daftarKosakata", dataBaru)
+            .apply()
+    }
+
+    private fun ambilKataDariPertanyaan(pertanyaan: String): String {
+        val regex = "'(.*?)'".toRegex()
+        return regex.find(pertanyaan)?.groupValues?.get(1) ?: ""
     }
 
     private fun selesaiKuis() {

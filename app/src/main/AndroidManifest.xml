@@ -82,6 +82,13 @@
         <activity
             android:name=".profile.PengingatBelajarActivity"
             android:exported="false" />
+        <activity
+            android:name=".materi.PercakapanActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".materi.PercakapanDetailActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

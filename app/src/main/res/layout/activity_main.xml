@@ -387,6 +387,7 @@
                         android:textStyle="bold" />
 
                     <Button
+                        android:id="@+id/btnMulaiBelajar"
                         android:layout_width="wrap_content"
                         android:layout_height="42dp"
                         android:layout_marginTop="12dp"
@@ -793,102 +794,18 @@
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Pilih jenis kuis yang ingin kamu kerjakan"
+                        android:text="AYO BERLATIH SEKARANG"
                         android:textColor="#FFFFFF"
                         android:textSize="21sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Latih pemahamanmu tentang kosakata, tempat bersejarah, dan budaya Banjar."
-                        android:textColor="#EAF0FF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="18dp"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="7dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_white_round"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2"
-                            android:textColor="#2457FF"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Jenis Kuis"
-                            android:textColor="#6B7280"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="7dp"
-                        android:layout_marginEnd="7dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_white_round"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10"
-                            android:textColor="#2457FF"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Total Soal"
-                            android:textColor="#6B7280"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="7dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_white_round"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="80"
-                            android:textColor="#2457FF"
-                            android:textSize="17sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Target Nilai"
-                            android:textColor="#6B7280"
-                            android:textSize="10sp" />
-                    </LinearLayout>
+                        android:text="Latihan menjadi lebih mudah dengan soal pilihan ganda yang menyenangkan."
+                        android:textSize="14sp"
+                        android:textColor="#FFFFFF"
+                        android:alpha="0.9"
+                        android:layout_marginTop="12dp"/>
                 </LinearLayout>
 
                 <TextView
@@ -964,175 +881,44 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="92dp"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/bg_white_round"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <TextView
-                        android:layout_width="58dp"
-                        android:layout_height="58dp"
-                        android:background="@drawable/bg_light_blue_round"
-                        android:gravity="center"
-                        android:text="✍️"
-                        android:textSize="23sp" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Esai"
-                            android:textColor="#111827"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Tulis jawabanmu sendiri berdasarkan materi."
-                            android:textColor="#6B7280"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="5 Soal • 15 Menit"
-                            android:textColor="#2457FF"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:background="@drawable/bg_blue_chip"
-                        android:gravity="center"
-                        android:text="›"
-                        android:textColor="#FFFFFF"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="92dp"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/bg_white_round"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="14dp">
-
-                    <TextView
-                        android:layout_width="58dp"
-                        android:layout_height="58dp"
-                        android:background="@drawable/bg_light_blue_round"
-                        android:gravity="center"
-                        android:text="🧩"
-                        android:textSize="23sp" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Campuran"
-                            android:textColor="#111827"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Gabungan pilihan ganda dan esai."
-                            android:textColor="#6B7280"
-                            android:textSize="11sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:text="10 Soal • 20 Menit"
-                            android:textColor="#2457FF"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
-                        android:background="@drawable/bg_blue_chip"
-                        android:gravity="center"
-                        android:text="›"
-                        android:textColor="#FFFFFF"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="22dp"
-                    android:text="Riwayat Kuis"
-                    android:textColor="#111827"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="74dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/bg_white_round"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="15dp">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Kosakata Bahasa Banjar"
-                            android:textColor="#111827"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Terakhir dikerjakan • Nilai cukup baik"
-                            android:textColor="#6B7280"
-                            android:textSize="11sp" />
-                    </LinearLayout>
+                    android:orientation="vertical"
+                    android:padding="18dp">
 
                     <TextView
-                        android:layout_width="42dp"
-                        android:layout_height="42dp"
-                        android:background="@drawable/bg_light_blue_round"
-                        android:gravity="center"
-                        android:text="75"
-                        android:textColor="#2457FF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌟 Kata Banjar Hari Ini"
+                        android:textColor="#111827"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Ulun"
+                        android:textColor="#2457FF"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Artinya: Saya"
+                        android:textColor="#6B7280"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Gunakan kata ini dalam percakapan sehari-hari untuk mempercepat penguasaan Bahasa Banjar."
+                        android:textColor="#374151"
+                        android:textSize="13sp" />
+
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

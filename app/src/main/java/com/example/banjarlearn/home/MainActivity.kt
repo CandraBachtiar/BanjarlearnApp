@@ -9,6 +9,7 @@ import com.example.banjarlearn.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import android.content.Intent
+import android.widget.Button
 import com.example.banjarlearn.materi.KosakataActivity
 import com.example.banjarlearn.materi.CeritaRakyatActivity
 import com.example.banjarlearn.materi.KesenianActivity
@@ -19,6 +20,7 @@ import com.example.banjarlearn.profile.DataPenggunaActivity
 import com.example.banjarlearn.profile.RiwayatNilaiActivity
 import com.example.banjarlearn.profile.PengaturanActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.banjarlearn.materi.PercakapanActivity
 import com.example.banjarlearn.profile.PengingatBelajarActivity
 
 class MainActivity : AppCompatActivity() {
@@ -63,6 +65,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardRiwayatNilai: LinearLayout
     private lateinit var cardPengaturan: LinearLayout
     private lateinit var cardPengingatBelajar: LinearLayout
+    private lateinit var btnMulaiBelajar: Button
 
 
 
@@ -81,63 +84,11 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+        // Initialize Firebase
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
-        cardKosakata = findViewById(R.id.cardKosakata)
 
-        cardKosakata.setOnClickListener {
-            startActivity(Intent(this, KosakataActivity::class.java))
-        }
-        cardCerita = findViewById(R.id.cardCerita)
-
-        cardCerita.setOnClickListener {
-            startActivity(Intent(this, CeritaRakyatActivity::class.java))
-        }
-        cardKesenian = findViewById(R.id.cardKesenian)
-        cardKesenian.setOnClickListener {
-            startActivity(Intent(this, KesenianActivity::class.java))
-        }
-        cardMateriKosakata = findViewById(R.id.cardMateriKosakata)
-        cardMateriKosakata.setOnClickListener {
-            startActivity(
-                Intent(this, KosakataActivity::class.java)
-            )
-        }
-        cardTempatBersejarah = findViewById(R.id.cardTempatBersejarah)
-        cardBudayaBanjar = findViewById(R.id.cardBudayaBanjar)
-        cardBudayaBanjar.setOnClickListener {
-            startActivity(
-                Intent(this, KesenianActivity::class.java)
-            )
-        }
-        cardDataPengguna = findViewById(R.id.cardDataPengguna)
-        cardDataPengguna.setOnClickListener {
-            val intent = Intent(this, DataPenggunaActivity::class.java)
-            intent.putExtra("nama", tvProfileName.text.toString())
-            startActivity(intent)
-        }
-        cardRiwayatNilai = findViewById(R.id.cardRiwayatNilai)
-        cardRiwayatNilai.setOnClickListener {
-            startActivity(
-                Intent(this, RiwayatNilaiActivity::class.java)
-            )
-        }
-        cardPengaturan = findViewById(R.id.cardPengaturan)
-        cardPengaturan.setOnClickListener {
-            startActivity(
-                Intent(this, PengaturanActivity::class.java)
-            )
-        }
-        cardPengingatBelajar = findViewById(R.id.cardPengingatBelajar)
-        cardPengingatBelajar.setOnClickListener {
-            startActivity(
-                Intent(this, PengingatBelajarActivity::class.java)
-            )
-        }
-
-
-
-
+        // Initialize Views
         tvGreeting = findViewById(R.id.tvGreeting)
         tvUserName = findViewById(R.id.tvUserName)
         tvProfileInitial = findViewById(R.id.tvProfileInitial)
@@ -154,62 +105,86 @@ class MainActivity : AppCompatActivity() {
         pageMateri = findViewById(R.id.pageMateri)
         pageKuis = findViewById(R.id.pageKuis)
         pageProfil = findViewById(R.id.pageProfil)
-        cardLogout = findViewById(R.id.cardLogout)
 
         navHome = findViewById(R.id.navHome)
         navMateri = findViewById(R.id.navMateri)
         navKuis = findViewById(R.id.navKuis)
         navProfil = findViewById(R.id.navProfil)
+
+        cardKosakata = findViewById(R.id.cardKosakata)
+        cardCerita = findViewById(R.id.cardCerita)
+        cardKesenian = findViewById(R.id.cardKesenian)
         cardPercakapan = findViewById(R.id.cardPercakapan)
         cardKosakataDasar = findViewById(R.id.cardKosakataDasar)
+        cardMateriKosakata = findViewById(R.id.cardMateriKosakata)
+        cardTempatBersejarah = findViewById(R.id.cardTempatBersejarah)
+        cardBudayaBanjar = findViewById(R.id.cardBudayaBanjar)
         cardPilihanGanda = findViewById(R.id.cardPilihanGanda)
-        cardPilihanGanda.setOnClickListener {
-            startActivity(
-                Intent(this, PilihanGandaActivity::class.java)
-            )
+        cardLogout = findViewById(R.id.cardLogout)
+        cardDataPengguna = findViewById(R.id.cardDataPengguna)
+        cardRiwayatNilai = findViewById(R.id.cardRiwayatNilai)
+        cardPengaturan = findViewById(R.id.cardPengaturan)
+        cardPengingatBelajar = findViewById(R.id.cardPengingatBelajar)
+        btnMulaiBelajar = findViewById(R.id.btnMulaiBelajar)
+
+        // Set Click Listeners
+        cardKosakata.setOnClickListener {
+            startActivity(Intent(this, KosakataActivity::class.java))
         }
 
-        loadUserData()
-        loadProgressKuis()
-        showPage("home")
+        cardCerita.setOnClickListener {
+            startActivity(Intent(this, CeritaRakyatActivity::class.java))
+        }
+
+        cardKesenian.setOnClickListener {
+            startActivity(Intent(this, KesenianActivity::class.java))
+        }
+
+        cardMateriKosakata.setOnClickListener {
+            startActivity(Intent(this, KosakataActivity::class.java))
+        }
+
+        cardBudayaBanjar.setOnClickListener {
+            startActivity(Intent(this, KesenianActivity::class.java))
+        }
+
+        cardDataPengguna.setOnClickListener {
+            val intent = Intent(this, DataPenggunaActivity::class.java)
+            intent.putExtra("nama", tvProfileName.text.toString())
+            startActivity(intent)
+        }
+
+        cardRiwayatNilai.setOnClickListener {
+            startActivity(Intent(this, RiwayatNilaiActivity::class.java))
+        }
+
+        cardPengaturan.setOnClickListener {
+            startActivity(Intent(this, PengaturanActivity::class.java))
+        }
+
+        cardPengingatBelajar.setOnClickListener {
+            startActivity(Intent(this, PengingatBelajarActivity::class.java))
+        }
+
+        btnMulaiBelajar.setOnClickListener {
+            startActivity(Intent(this, PilihanGandaActivity::class.java))
+        }
+
+        cardKosakataDasar.setOnClickListener {
+            startActivity(Intent(this, KosakataActivity::class.java))
+        }
+
+        cardPilihanGanda.setOnClickListener {
+            startActivity(Intent(this, PilihanGandaActivity::class.java))
+        }
 
         navHome.setOnClickListener { showPage("home") }
         navMateri.setOnClickListener { showPage("materi") }
         navKuis.setOnClickListener { showPage("kuis") }
         navProfil.setOnClickListener { showPage("profil") }
+
         cardPercakapan.setOnClickListener {
-            bukaMateri(
-                "Percakapan Sehari-hari",
-                """
-Apa habar?
-= Apa kabar?
-
-Ulun baik haja.
-= Saya baik saja.
-
-Pian handak kamana?
-= Kamu mau ke mana?
-
-Ulun handak tulak ka pasar.
-= Saya mau pergi ke pasar.
-        """.trimIndent()
-            )
-        }
-
-        cardKosakataDasar.setOnClickListener {
-            bukaMateri(
-                "Kosakata Dasar Banjar",
-                """
-Ulun = Saya
-Ikam = Kamu
-Pian = Anda
-Banyu = Air
-Tulak = Pergi
-Bulik = Pulang
-Handak = Mau
-Lauk = Ikan
-        """.trimIndent()
-            )
+            startActivity(Intent(this, PercakapanActivity::class.java))
         }
 
         cardTempatBersejarah.setOnClickListener {
@@ -230,15 +205,15 @@ Tempat-tempat ini menjadi saksi perkembangan masyarakat Banjar dari masa ke masa
         }
 
         cardLogout.setOnClickListener {
-
             auth.signOut()
-
-            startActivity(
-                Intent(this, LoginActivity::class.java)
-            )
-
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
+
+        // Initial Page and Data Loading
+        loadUserData()
+        loadProgressKuis()
+        showPage("home")
     }
 
 
