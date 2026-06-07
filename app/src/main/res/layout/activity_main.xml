@@ -54,13 +54,13 @@
 
                         <TextView
                             android:id="@+id/tvUserInitial"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
                             android:background="@drawable/bg_white_round"
                             android:gravity="center"
                             android:text="R"
                             android:textColor="#2457FF"
-                            android:textSize="12sp"
+                            android:textSize="28sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -946,6 +946,7 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
+                    android:id="@+id/cardPilihanGanda"
                     android:layout_width="match_parent"
                     android:layout_height="92dp"
                     android:layout_marginTop="14dp"
@@ -1251,6 +1252,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvProfileInitial"
                         android:layout_width="74dp"
                         android:layout_height="74dp"
                         android:background="@drawable/bg_white_round"
@@ -1259,7 +1261,6 @@
                         android:textColor="#2457FF"
                         android:textSize="28sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:id="@+id/tvProfileName"
                         android:layout_width="wrap_content"
@@ -1308,9 +1309,10 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvTotalKosakata"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="12"
+                            android:text="0"
                             android:textColor="#2457FF"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -1318,8 +1320,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Materi"
-                            android:textColor="#6B7280"
+                            android:text="Kosakata"                            android:textColor="#6B7280"
                             android:textSize="10sp" />
                     </LinearLayout>
 
@@ -1334,9 +1335,10 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvTotalKuis"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="8"
+                            android:text="0"
                             android:textColor="#2457FF"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -1359,9 +1361,10 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvNilaiTerakhir"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="75"
+                            android:text="0"
                             android:textColor="#2457FF"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -1369,8 +1372,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nilai"
-                            android:textColor="#6B7280"
+                            android:text="Nilai Terakhir"                            android:textColor="#6B7280"
                             android:textSize="10sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -1430,21 +1432,23 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/tvProgressPersen"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="68%"
+                            android:text="0%"
                             android:textColor="#2457FF"
                             android:textSize="12sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
                     <ProgressBar
+                        android:id="@+id/progressKosakata"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="8dp"
                         android:layout_marginTop="12dp"
                         android:max="100"
-                        android:progress="68"
+                        android:progress="0"
                         android:progressBackgroundTint="#E5E7EB"
                         android:progressTint="#2457FF" />
                 </LinearLayout>
@@ -1459,6 +1463,7 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
+                    android:id="@+id/cardDataPengguna"
                     android:layout_width="match_parent"
                     android:layout_height="74dp"
                     android:layout_marginTop="12dp"
@@ -1510,6 +1515,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardRiwayatNilai"
                     android:layout_width="match_parent"
                     android:layout_height="74dp"
                     android:layout_marginTop="12dp"
@@ -1561,6 +1567,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardPengingatBelajar"
                     android:layout_width="match_parent"
                     android:layout_height="74dp"
                     android:layout_marginTop="12dp"
@@ -1612,6 +1619,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardPengaturan"
                     android:layout_width="match_parent"
                     android:layout_height="74dp"
                     android:layout_marginTop="12dp"
@@ -1663,6 +1671,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/cardLogout"
                     android:layout_width="match_parent"
                     android:layout_height="74dp"
                     android:layout_marginTop="12dp"

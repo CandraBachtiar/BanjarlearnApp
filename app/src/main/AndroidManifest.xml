@@ -30,7 +30,7 @@
             android:name=".materi.CeritaRakyatActivity"
             android:exported="false" />
         <activity
-            android:name=".materi.CeritaDetailActivity"
+            android:name=".materi.CeritaRakyatDetail"
             android:exported="false" />
         <activity
             android:name=".materi.KesenianActivity"
@@ -59,6 +59,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".kuis.PilihanGandaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kuis.HasilKuisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.DataPenggunaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.RiwayatNilaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.PengaturanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profile.PengingatBelajarActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

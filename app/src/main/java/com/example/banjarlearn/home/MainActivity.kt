@@ -13,6 +13,13 @@ import com.example.banjarlearn.materi.KosakataActivity
 import com.example.banjarlearn.materi.CeritaRakyatActivity
 import com.example.banjarlearn.materi.KesenianActivity
 import com.example.banjarlearn.materi.MateriDetailActivity
+import com.example.banjarlearn.kuis.PilihanGandaActivity
+import com.example.banjarlearn.auth.LoginActivity
+import com.example.banjarlearn.profile.DataPenggunaActivity
+import com.example.banjarlearn.profile.RiwayatNilaiActivity
+import com.example.banjarlearn.profile.PengaturanActivity
+import androidx.appcompat.app.AppCompatDelegate
+import com.example.banjarlearn.profile.PengingatBelajarActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,9 +28,17 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var tvGreeting: TextView
     private lateinit var tvUserName: TextView
-    private lateinit var tvUserInitial: TextView
     private lateinit var tvProfileName: TextView
     private lateinit var tvLevel: TextView
+    private lateinit var tvTotalKosakata: TextView
+    private lateinit var tvTotalKuis: TextView
+    private lateinit var tvNilaiTerakhir: TextView
+    private lateinit var tvProgressPersen: TextView
+    private lateinit var progressKosakata: android.widget.ProgressBar
+    private lateinit var tvProfileInitial: TextView
+    private lateinit var tvUserInitial: TextView
+
+
 
     private lateinit var pageHome: View
     private lateinit var pageMateri: View
@@ -42,10 +57,28 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cardMateriKosakata: LinearLayout
     private lateinit var cardTempatBersejarah: LinearLayout
     private lateinit var cardBudayaBanjar: LinearLayout
+    private lateinit var cardPilihanGanda: LinearLayout
+    private lateinit var cardLogout: LinearLayout
+    private lateinit var cardDataPengguna: LinearLayout
+    private lateinit var cardRiwayatNilai: LinearLayout
+    private lateinit var cardPengaturan: LinearLayout
+    private lateinit var cardPengingatBelajar: LinearLayout
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val prefsMode = getSharedPreferences("pengaturan_app", MODE_PRIVATE)
+        val isDarkMode = prefsMode.getBoolean("darkMode", false)
+
+        AppCompatDelegate.setDefaultNightMode(
+            if (isDarkMode) {
+                AppCompatDelegate.MODE_NIGHT_YES
+            } else {
+                AppCompatDelegate.MODE_NIGHT_NO
+            }
+        )
+
         setContentView(R.layout.activity_main)
 
         auth = FirebaseAuth.getInstance()
@@ -67,19 +100,51 @@ class MainActivity : AppCompatActivity() {
         cardMateriKosakata = findViewById(R.id.cardMateriKosakata)
         cardTempatBersejarah = findViewById(R.id.cardTempatBersejarah)
         cardBudayaBanjar = findViewById(R.id.cardBudayaBanjar)
+        cardDataPengguna = findViewById(R.id.cardDataPengguna)
+        cardDataPengguna.setOnClickListener {
+            val intent = Intent(this, DataPenggunaActivity::class.java)
+            intent.putExtra("nama", tvProfileName.text.toString())
+            startActivity(intent)
+        }
+        cardRiwayatNilai = findViewById(R.id.cardRiwayatNilai)
+        cardRiwayatNilai.setOnClickListener {
+            startActivity(
+                Intent(this, RiwayatNilaiActivity::class.java)
+            )
+        }
+        cardPengaturan = findViewById(R.id.cardPengaturan)
+        cardPengaturan.setOnClickListener {
+            startActivity(
+                Intent(this, PengaturanActivity::class.java)
+            )
+        }
+        cardPengingatBelajar = findViewById(R.id.cardPengingatBelajar)
+        cardPengingatBelajar.setOnClickListener {
+            startActivity(
+                Intent(this, PengingatBelajarActivity::class.java)
+            )
+        }
+
 
 
 
         tvGreeting = findViewById(R.id.tvGreeting)
         tvUserName = findViewById(R.id.tvUserName)
+        tvProfileInitial = findViewById(R.id.tvProfileInitial)
         tvUserInitial = findViewById(R.id.tvUserInitial)
         tvProfileName = findViewById(R.id.tvProfileName)
         tvLevel = findViewById(R.id.tvLevel)
+        tvTotalKosakata = findViewById(R.id.tvTotalKosakata)
+        tvTotalKuis = findViewById(R.id.tvTotalKuis)
+        tvNilaiTerakhir = findViewById(R.id.tvNilaiTerakhir)
+        tvProgressPersen = findViewById(R.id.tvProgressPersen)
+        progressKosakata = findViewById(R.id.progressKosakata)
 
         pageHome = findViewById(R.id.pageHome)
         pageMateri = findViewById(R.id.pageMateri)
         pageKuis = findViewById(R.id.pageKuis)
         pageProfil = findViewById(R.id.pageProfil)
+        cardLogout = findViewById(R.id.cardLogout)
 
         navHome = findViewById(R.id.navHome)
         navMateri = findViewById(R.id.navMateri)
@@ -87,10 +152,16 @@ class MainActivity : AppCompatActivity() {
         navProfil = findViewById(R.id.navProfil)
         cardPercakapan = findViewById(R.id.cardPercakapan)
         cardKosakataDasar = findViewById(R.id.cardKosakataDasar)
+        cardPilihanGanda = findViewById(R.id.cardPilihanGanda)
+        cardPilihanGanda.setOnClickListener {
+            startActivity(
+                Intent(this, PilihanGandaActivity::class.java)
+            )
+        }
 
         loadUserData()
+        loadProgressKuis()
         showPage("home")
-
 
         navHome.setOnClickListener { showPage("home") }
         navMateri.setOnClickListener { showPage("materi") }
@@ -182,7 +253,46 @@ Budaya Banjar diwariskan secara turun-temurun dan masih dilestarikan hingga seka
         """.trimIndent()
             )
         }
+        cardLogout.setOnClickListener {
+
+            auth.signOut()
+
+            startActivity(
+                Intent(this, LoginActivity::class.java)
+            )
+
+            finish()
         }
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        loadProgressKuis()
+    }
+
+    private fun loadProgressKuis() {
+        val prefs = getSharedPreferences("progress_kuis", MODE_PRIVATE)
+
+        val totalKosakata = prefs.getInt("totalKosakata", 0)
+        val totalKuis = prefs.getInt("totalKuis", 0)
+        val nilaiTerakhir = prefs.getInt("nilaiTerakhir", 0)
+
+        tvTotalKosakata.text = totalKosakata.toString()
+        tvTotalKuis.text = totalKuis.toString()
+        tvNilaiTerakhir.text = nilaiTerakhir.toString()
+        tvProgressPersen.text = "$totalKosakata%"
+        progressKosakata.progress = totalKosakata
+
+        val levelKuis = when {
+            totalKosakata <= 25 -> "Pemula"
+            totalKosakata <= 50 -> "Menengah"
+            else -> "Master"
+        }
+
+        tvLevel.text = "⭐ Level $levelKuis"
+    }
+
     private fun bukaMateri(judul: String, isi: String) {
         val intent = Intent(this, MateriDetailActivity::class.java)
 
@@ -205,20 +315,19 @@ Budaya Banjar diwariskan secara turun-temurun dan masih dilestarikan hingga seka
             .get()
             .addOnSuccessListener { document ->
                 val name = document.getString("name") ?: "Pengguna"
-                val level = document.getString("Level") ?: "Pemula"
 
                 tvGreeting.text = "Halo, selamat datang 👋"
                 tvUserName.text = name
                 tvProfileName.text = name
-                tvLevel.text = "⭐ Level $level"
 
-                tvUserInitial.text = name.firstOrNull()
+                val initial = name.firstOrNull()
                     ?.uppercaseChar()
                     ?.toString() ?: "P"
+
+                tvUserInitial.text = initial
+                tvProfileInitial.text = initial
             }
-            .addOnFailureListener {
-                setDefaultUserData()
-            }
+
     }
 
     private fun setDefaultUserData() {
@@ -226,7 +335,9 @@ Budaya Banjar diwariskan secara turun-temurun dan masih dilestarikan hingga seka
         tvUserName.text = "Pengguna"
         tvProfileName.text = "Pengguna"
         tvLevel.text = "⭐ Level Pemula"
+
         tvUserInitial.text = "P"
+        tvProfileInitial.text = "P"
     }
 
     private fun showPage(page: String) {

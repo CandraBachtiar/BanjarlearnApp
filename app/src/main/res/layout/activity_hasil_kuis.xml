@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎉"
+            android:textSize="80sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kuis Selesai"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvNilai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai: 100"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#2457FF"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tvBenar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jawaban benar: 5 dari 5"
+            android:textSize="18sp"
+            android:textColor="#374151"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvKosakata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kosakata dikuasai: 5 / 100"
+            android:textSize="18sp"
+            android:textColor="#374151"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level saat ini: Pemula"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnSelesai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kembali ke Beranda"
+            android:layout_marginTop="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>
