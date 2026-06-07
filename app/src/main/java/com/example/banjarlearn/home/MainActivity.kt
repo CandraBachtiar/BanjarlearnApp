@@ -193,11 +193,29 @@ class MainActivity : AppCompatActivity() {
                 """
 Kalimantan Selatan memiliki berbagai tempat bersejarah yang menjadi bagian penting budaya Banjar.
 
-Contohnya:
-• Museum Wasaka
-• Masjid Sultan Suriansyah
-• Makam Sultan Suriansyah
-• Candi Agung Amuntai
+1. Museum Wasaka
+
+Museum Wasaka atau Museum Waja Sampai Kaputing merupakan museum perjuangan rakyat Kalimantan Selatan yang berada di Jalan Kampung Kenanga, Sungai Jingah, Banjarmasin Utara. Museum ini diresmikan pada 10 November 1991 dan menyimpan berbagai peninggalan perjuangan rakyat Banjar, seperti senjata, pakaian pejuang, foto, serta dokumen sejarah. Bangunan museum ini berbentuk rumah adat Banjar Bubungan Tinggi dan dulunya merupakan bekas rumah tradisional atau rumah milik saudagar, kemudian dijadikan museum untuk mengenang perjuangan masyarakat Kalimantan Selatan melawan penjajahan.
+
+2. Masjid Sultan Suriansyah
+
+Masjid Sultan Suriansyah terletak di kawasan Kuin, Banjarmasin Utara, tepatnya di tepi Sungai Kuin. Masjid ini diperkirakan dibangun sekitar tahun 1526 M pada masa pemerintahan Sultan Suriansyah, raja Banjar pertama yang memeluk agama Islam. Masjid ini menjadi salah satu masjid tertua di Kalimantan Selatan dan menjadi bukti awal perkembangan Islam di Kerajaan Banjar. Bangunannya masih mempertahankan arsitektur tradisional Banjar, terutama pada bentuk atap dan penggunaan kayu ulin.
+
+3. Makam Sultan Suriansyah
+
+Makam Sultan Suriansyah berada di Jalan Kuin Utara, Kecamatan Banjarmasin Utara, tidak jauh dari Masjid Sultan Suriansyah. Tempat ini merupakan kompleks pemakaman Sultan Suriansyah, yaitu pendiri Kesultanan Banjar dan raja pertama Banjar yang memeluk Islam. Untuk tahun pembangunan makamnya tidak diketahui secara pasti, tetapi makam ini berkaitan dengan masa Kesultanan Banjar pada abad ke-16. Tempat ini menjadi salah satu situs ziarah penting karena menjadi peninggalan sejarah penyebaran Islam dan berdirinya Kesultanan Banjar.
+
+4. Candi Agung
+
+Candi Agung terletak di Amuntai, Kabupaten Hulu Sungai Utara, Kalimantan Selatan. Candi ini merupakan peninggalan Kerajaan Negara Dipa atau Negara Dipa Khuripan yang diperkirakan dibangun pada abad ke-14 M oleh Empu Jatmika. Candi Agung menjadi bukti adanya kerajaan bercorak Hindu di Kalimantan Selatan sebelum berkembangnya Kesultanan Banjar. Tempat ini merupakan bekas pusat peninggalan kerajaan lama yang kemudian menjadi bagian penting dalam sejarah asal-usul masyarakat Banjar.
+
+5. Makam Pangeran Antasari
+
+Makam Pangeran Antasari berada di Jalan Malkon Temon, Kelurahan Surgi Mufti, Kecamatan Banjarmasin Utara. Pangeran Antasari merupakan pahlawan nasional dari Kalimantan Selatan yang memimpin perlawanan rakyat Banjar melawan penjajah Belanda. Makam beliau awalnya berada di daerah Bayan Bengok, kemudian dipindahkan ke Banjarmasin pada tahun 1958. Tempat ini menjadi situs bersejarah karena menjadi simbol perjuangan rakyat Banjar dalam melawan penjajahan.
+
+6. Museum Lambung Mangkurat
+
+Museum Lambung Mangkurat terletak di Banjarbaru, Kalimantan Selatan. Museum ini awalnya berhubungan dengan Museum Borneo yang didirikan oleh Pemerintah Hindia Belanda pada tahun 1907 di Banjarmasin, kemudian berkembang dan dipindahkan ke Banjarbaru. Bangunan Museum Lambung Mangkurat mulai dibangun secara bertahap sejak tahun 1974. Museum ini menyimpan berbagai koleksi sejarah, budaya Banjar, arkeologi, benda kerajaan, hingga peninggalan masa Hindu dan Kesultanan Banjar.
 
 Tempat-tempat ini menjadi saksi perkembangan masyarakat Banjar dari masa ke masa.
         """.trimIndent()
