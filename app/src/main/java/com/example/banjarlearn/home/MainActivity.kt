@@ -98,8 +98,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, KesenianActivity::class.java))
         }
         cardMateriKosakata = findViewById(R.id.cardMateriKosakata)
+        cardMateriKosakata.setOnClickListener {
+            startActivity(
+                Intent(this, KosakataActivity::class.java)
+            )
+        }
         cardTempatBersejarah = findViewById(R.id.cardTempatBersejarah)
         cardBudayaBanjar = findViewById(R.id.cardBudayaBanjar)
+        cardBudayaBanjar.setOnClickListener {
+            startActivity(
+                Intent(this, KesenianActivity::class.java)
+            )
+        }
         cardDataPengguna = findViewById(R.id.cardDataPengguna)
         cardDataPengguna.setOnClickListener {
             val intent = Intent(this, DataPenggunaActivity::class.java)
@@ -202,23 +212,6 @@ Lauk = Ikan
             )
         }
 
-        cardMateriKosakata.setOnClickListener {
-            bukaMateri(
-                "Kosakata Bahasa Banjar",
-                """
-Bahasa Banjar memiliki banyak kosakata unik yang digunakan dalam kehidupan sehari-hari.
-
-Contoh:
-Ulun = Saya
-Ikam = Kamu
-Banyu = Air
-Handak = Mau
-Tulak = Pergi
-Bulik = Pulang
-        """.trimIndent()
-            )
-        }
-
         cardTempatBersejarah.setOnClickListener {
             bukaMateri(
                 "Tempat Bersejarah",
@@ -236,23 +229,6 @@ Tempat-tempat ini menjadi saksi perkembangan masyarakat Banjar dari masa ke masa
             )
         }
 
-        cardBudayaBanjar.setOnClickListener {
-            bukaMateri(
-                "Budaya Banjar",
-                """
-Budaya Banjar mencerminkan kehidupan masyarakat Kalimantan Selatan.
-
-Contohnya:
-• Tradisi Baayun Anak
-• Pasar Terapung
-• Madihin
-• Mamanda
-• Tari Baksa Kembang
-
-Budaya Banjar diwariskan secara turun-temurun dan masih dilestarikan hingga sekarang.
-        """.trimIndent()
-            )
-        }
         cardLogout.setOnClickListener {
 
             auth.signOut()

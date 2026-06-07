@@ -14,7 +14,11 @@
             android:id="@+id/pageHome"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="22dp"
+            android:paddingStart="22dp"
+            android:paddingTop="22dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="22dp"
+            android:clipToPadding="false"
             android:scrollbars="none">
 
             <LinearLayout
@@ -24,7 +28,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
+                    android:layout_height="210dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/bg_gradient_card"
                     android:orientation="vertical"
                     android:padding="18dp">
@@ -75,9 +80,11 @@
 
                     <TextView
                         android:id="@+id/tvUserName"
-                        android:layout_width="270dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
                         android:text="Nama Pengguna"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp"
@@ -355,11 +362,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="135dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="#111827"
                     android:orientation="vertical"
-                    android:padding="18dp">
+                    android:padding="18dp"
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -369,8 +377,9 @@
                         android:textSize="12sp" />
 
                     <TextView
-                        android:layout_width="260dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:maxWidth="260dp"
                         android:layout_marginTop="7dp"
                         android:text="Mulai latihan kuis bahasa Banjar sekarang"
                         android:textColor="#FFFFFF"
@@ -453,8 +462,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="145dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/bg_gradient_card"
                     android:orientation="vertical"
                     android:padding="18dp">
@@ -470,77 +479,23 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="280dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="24dp"
                         android:text="Pilih materi Banjar yang ingin dipelajari"
                         android:textColor="#FFFFFF"
-                        android:textSize="21sp"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="280dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Belajar bahasa, sejarah, dan budaya Banjar lewat materi singkat."
-                        android:textColor="#EAF0FF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
-                    android:layout_marginTop="18dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_blue_chip"
-                        android:gravity="center"
-                        android:paddingStart="17dp"
-                        android:paddingEnd="17dp"
-                        android:text="Semua"
+                        android:layout_marginTop="14dp"
+                        android:text="Belajar bahasa, sejarah, dan budaya Banjar"
                         android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="8dp"
-                        android:background="@drawable/bg_white_round"
-                        android:gravity="center"
-                        android:paddingStart="17dp"
-                        android:paddingEnd="17dp"
-                        android:text="Kosakata"
-                        android:textColor="#111827"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="8dp"
-                        android:background="@drawable/bg_white_round"
-                        android:gravity="center"
-                        android:paddingStart="17dp"
-                        android:paddingEnd="17dp"
-                        android:text="Sejarah"
-                        android:textColor="#111827"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="8dp"
-                        android:background="@drawable/bg_white_round"
-                        android:gravity="center"
-                        android:paddingStart="17dp"
-                        android:paddingEnd="17dp"
-                        android:text="Budaya"
-                        android:textColor="#111827"
-                        android:textSize="12sp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
