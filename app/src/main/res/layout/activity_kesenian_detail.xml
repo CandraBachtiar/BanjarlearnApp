@@ -3,13 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F9FF"
-    android:padding="22dp"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingStart="22dp"
+    android:paddingTop="22dp"
+    android:paddingEnd="22dp"
+    android:paddingBottom="22dp"
     android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
 
         <TextView
             android:id="@+id/btnBack"
@@ -30,16 +36,17 @@
             android:text="Judul Kesenian"
             android:textColor="#111827"
             android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:lineSpacingExtra="3dp" />
 
-        <TextView
+        <ImageView
+            android:id="@+id/imgKesenian"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="210dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/bg_light_blue_round"
-            android:gravity="center"
-            android:text="🎭"
-            android:textSize="64sp" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/tari_baksa_kembang" />
 
         <TextView
             android:id="@+id/tvIsiKesenian"
