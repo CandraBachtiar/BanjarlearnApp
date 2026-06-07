@@ -28,31 +28,77 @@ class CeritaRakyatActivity : AppCompatActivity() {
         }
 
         btnCerita1.setOnClickListener {
+
             bukaDetail(
                 "Putri Junjung Buih",
-                "Putri Junjung Buih adalah salah satu cerita rakyat yang dikenal dalam budaya Banjar. Kisah ini menceritakan tentang sosok putri yang memiliki kedudukan penting dalam legenda masyarakat Banjar. Cerita ini mengandung nilai tentang asal-usul, kepemimpinan, dan penghormatan terhadap tokoh perempuan dalam tradisi Banjar."
+
+                """
+Pada zaman dahulu, Lambung Mangkurat melakukan pertapaan untuk mencari pemimpin bagi Kerajaan Negara Dipa.
+
+Dari tengah buih sungai muncullah seorang putri cantik yang kemudian dikenal sebagai Putri Junjung Buih.
+
+Putri tersebut dipercaya membawa kejayaan bagi kerajaan dan kemudian menikah dengan Pangeran Suryanata.
+
+Dari keturunan mereka lahirlah para raja Banjar.
+
+Cerita ini mengajarkan pentingnya kebijaksanaan, kepemimpinan, dan penghormatan terhadap budaya leluhur.
+                """.trimIndent(),
+
+                R.drawable.putri_junjung_buih
             )
         }
 
         btnCerita2.setOnClickListener {
+
             bukaDetail(
                 "Datu Sanggul",
-                "Datu Sanggul dikenal sebagai salah satu tokoh dalam cerita masyarakat Banjar yang memiliki nilai religius dan keteladanan. Kisahnya sering dikaitkan dengan kebijaksanaan, ilmu agama, serta kehidupan masyarakat yang menjunjung tinggi akhlak dan kebaikan."
+
+                """
+Datu Sanggul merupakan ulama terkenal di Kalimantan Selatan.
+
+Beliau dikenal sebagai sosok yang sederhana, bijaksana, dan memiliki pengetahuan agama yang luas.
+
+Masyarakat Banjar menghormatinya karena keteladanan serta dedikasinya dalam menyebarkan ajaran Islam.
+
+Kisah beliau mengajarkan pentingnya ilmu, kesabaran, dan akhlak yang baik.
+                """.trimIndent(),
+
+                R.drawable.datu_sanggul
             )
         }
 
         btnCerita3.setOnClickListener {
+
             bukaDetail(
                 "Legenda Sungai Barito",
-                "Sungai Barito memiliki peran penting dalam kehidupan masyarakat Kalimantan Selatan. Dalam cerita rakyat, sungai sering digambarkan sebagai sumber kehidupan, jalur perdagangan, dan bagian dari identitas masyarakat Banjar yang dekat dengan budaya sungai."
+
+                """
+Sungai Barito merupakan salah satu sungai terbesar yang menjadi bagian penting kehidupan masyarakat Banjar.
+
+Sejak dahulu sungai ini digunakan sebagai jalur perdagangan, transportasi, dan sumber kehidupan.
+
+Budaya sungai melahirkan berbagai tradisi khas seperti pasar terapung dan kehidupan masyarakat bantaran sungai.
+
+Cerita ini menunjukkan eratnya hubungan masyarakat Banjar dengan alam dan lingkungan sekitarnya.
+                """.trimIndent(),
+
+                R.drawable.sungai_barito
             )
         }
     }
 
-    private fun bukaDetail(judul: String, isi: String) {
-        val intent = Intent(this, CeritaDetailActivity::class.java)
+    private fun bukaDetail(
+        judul: String,
+        isi: String,
+        gambar: Int
+    ) {
+
+        val intent = Intent(this, CeritaRakyatDetail::class.java)
+
         intent.putExtra("judul", judul)
         intent.putExtra("isi", isi)
+        intent.putExtra("gambar", gambar)
+
         startActivity(intent)
     }
 }

@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Tombol Back -->
         <TextView
             android:id="@+id/btnBack"
             android:layout_width="44dp"
@@ -22,6 +23,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- Judul -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,26 +37,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Kumpulan kisah rakyat, legenda, dan budaya Banjar."
+            android:text="Kumpulan kisah rakyat dan budaya Banjar untuk anak-anak."
             android:textColor="#6B7280"
             android:textSize="14sp" />
 
-        <!-- Card 1 -->
+        <!-- CARD 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:background="@drawable/bg_white_round"
+            android:elevation="4dp"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="170dp"
                 android:background="@drawable/bg_light_blue_round"
-                android:gravity="center"
-                android:text="👑"
-                android:textSize="54sp" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/putri_junjung_buih" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -69,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="Legenda tentang tokoh perempuan yang dikenal dalam cerita rakyat dan sejarah budaya Banjar."
+                android:text="Kisah putri yang muncul dari buih sungai dan menjadi bagian sejarah Kerajaan Banjar."
                 android:textColor="#6B7280"
                 android:textSize="13sp" />
 
@@ -81,26 +83,25 @@
                 android:backgroundTint="#2457FF"
                 android:text="Baca Cerita"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Card 2 -->
+        <!-- CARD 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_white_round"
+            android:elevation="4dp"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="170dp"
                 android:background="@drawable/bg_light_blue_round"
-                android:gravity="center"
-                android:text="🕌"
-                android:textSize="54sp" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/datu_sanggul" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -115,7 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="Kisah tentang ulama dan tokoh masyarakat Banjar yang dikenal memiliki nilai religius dan keteladanan."
+                android:text="Tokoh Banjar yang dikenal bijaksana dan memiliki ilmu agama yang luas."
                 android:textColor="#6B7280"
                 android:textSize="13sp" />
 
@@ -127,27 +128,26 @@
                 android:backgroundTint="#2457FF"
                 android:text="Baca Cerita"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Card 3 -->
+        <!-- CARD 3 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/bg_white_round"
+            android:elevation="4dp"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="170dp"
                 android:background="@drawable/bg_light_blue_round"
-                android:gravity="center"
-                android:text="🏞️"
-                android:textSize="54sp" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/sungai_barito" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="Cerita yang berkaitan dengan kehidupan masyarakat Banjar dan sungai sebagai bagian penting dari budaya."
+                android:text="Cerita tentang sungai yang menjadi bagian penting kehidupan masyarakat Banjar."
                 android:textColor="#6B7280"
                 android:textSize="13sp" />
 
@@ -174,9 +174,9 @@
                 android:backgroundTint="#2457FF"
                 android:text="Baca Cerita"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>
