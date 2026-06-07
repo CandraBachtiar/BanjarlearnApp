@@ -10,13 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="86dp"
-        android:padding="22dp"
+        android:paddingStart="22dp"
+        android:paddingTop="22dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="36dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,38 +73,47 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="145dp"
+                android:layout_height="wrap_content"
+                android:minHeight="170dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_gradient_card"
                 android:orientation="vertical"
-                android:padding="18dp">
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="18dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_chip_transparent"
-                    android:padding="7dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="6dp"
                     android:text="🎯 Pusat Kuis"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="280dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Pilih jenis kuis yang ingin kamu kerjakan"
                     android:textColor="#FFFFFF"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="2dp" />
 
                 <TextView
-                    android:layout_width="280dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Latih pemahamanmu tentang kosakata, tempat bersejarah, dan budaya Banjar."
                     android:textColor="#EAF0FF"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="2dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -196,7 +211,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="92dp"
+                android:layout_height="wrap_content"
+                android:minHeight="92dp"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -219,20 +235,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Pilihan Ganda"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Jawab soal dengan memilih satu jawaban benar."
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -257,7 +275,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="92dp"
+                android:layout_height="wrap_content"
+                android:minHeight="92dp"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -280,20 +299,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Esai"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Tulis jawabanmu sendiri berdasarkan materi."
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -318,7 +339,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="92dp"
+                android:layout_height="wrap_content"
+                android:minHeight="92dp"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -341,20 +363,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Campuran"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Gabungan pilihan ganda dan esai."
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -388,7 +412,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="74dp"
+                android:layout_height="wrap_content"
+                android:minHeight="74dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -402,20 +427,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Kosakata Bahasa Banjar"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Terakhir dikerjakan • Nilai cukup baik"
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
                 </LinearLayout>
 
                 <TextView

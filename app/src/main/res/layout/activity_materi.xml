@@ -11,14 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="86dp"
-        android:padding="22dp"
+        android:paddingStart="22dp"
+        android:paddingTop="22dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="32dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="70dp">
 
+            <!-- TOP BAR -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
@@ -66,101 +73,57 @@
                     android:textSize="16sp" />
             </LinearLayout>
 
+            <!-- CARD PUSAT MATERI -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="145dp"
+                android:layout_height="wrap_content"
+                android:minHeight="170dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_gradient_card"
                 android:orientation="vertical"
-                android:padding="18dp">
+                android:paddingStart="18dp"
+                android:paddingTop="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="18dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_chip_transparent"
-                    android:padding="7dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="6dp"
                     android:text="📚 Pusat Materi"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="280dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Pilih materi Banjar yang ingin dipelajari"
                     android:textColor="#FFFFFF"
-                    android:textSize="21sp"
-                    android:textStyle="bold" />
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="2dp" />
 
                 <TextView
-                    android:layout_width="280dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Belajar bahasa, sejarah, dan budaya Banjar lewat materi singkat."
                     android:textColor="#EAF0FF"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_marginTop="18dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bg_blue_chip"
-                    android:gravity="center"
-                    android:paddingStart="17dp"
-                    android:paddingEnd="17dp"
-                    android:text="Semua"
-                    android:textColor="#FFFFFF"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/bg_white_round"
-                    android:gravity="center"
-                    android:paddingStart="17dp"
-                    android:paddingEnd="17dp"
-                    android:text="Kosakata"
-                    android:textColor="#111827"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/bg_white_round"
-                    android:gravity="center"
-                    android:paddingStart="17dp"
-                    android:paddingEnd="17dp"
-                    android:text="Sejarah"
-                    android:textColor="#111827"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/bg_white_round"
-                    android:gravity="center"
-                    android:paddingStart="17dp"
-                    android:paddingEnd="17dp"
-                    android:text="Budaya"
-                    android:textColor="#111827"
-                    android:textSize="12sp" />
+                    android:lineSpacingExtra="2dp" />
             </LinearLayout>
 
+            <!-- DAFTAR MATERI -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -182,9 +145,12 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- CARD KOSAKATA -->
             <LinearLayout
+                android:id="@+id/cardMateriKosakata"
                 android:layout_width="match_parent"
-                android:layout_height="86dp"
+                android:layout_height="wrap_content"
+                android:minHeight="86dp"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -207,20 +173,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Kosakata Bahasa Banjar"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Mengenal kata-kata dasar bahasa Banjar."
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -243,9 +211,12 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- CARD TEMPAT BERSEJARAH -->
             <LinearLayout
+                android:id="@+id/cardTempatBersejarah"
                 android:layout_width="match_parent"
-                android:layout_height="86dp"
+                android:layout_height="wrap_content"
+                android:minHeight="86dp"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -268,20 +239,22 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tempat Bersejarah"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Mengenal tempat bersejarah masyarakat Banjar."
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -304,9 +277,12 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- CARD KESENIAN BANJAR -->
             <LinearLayout
+                android:id="@+id/cardBudayaBanjar"
                 android:layout_width="match_parent"
-                android:layout_height="86dp"
+                android:layout_height="wrap_content"
+                android:minHeight="86dp"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/bg_white_round"
                 android:gravity="center_vertical"
@@ -329,26 +305,28 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Budaya Banjar"
+                        android:text="Kesenian Banjar"
                         android:textColor="#111827"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:maxLines="1" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Belajar adat, tradisi, dan kesenian Banjar."
                         android:textColor="#6B7280"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"
+                        android:maxLines="2" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Budaya • 15 menit"
+                        android:text="Kesenian • 15 menit"
                         android:textColor="#2457FF"
                         android:textSize="10sp"
                         android:textStyle="bold" />
@@ -366,7 +344,6 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 
     <!-- ================= BOTTOM NAV ================= -->
     <LinearLayout
