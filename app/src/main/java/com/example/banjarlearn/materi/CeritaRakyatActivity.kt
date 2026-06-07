@@ -1,7 +1,6 @@
 package com.example.banjarlearn.materi
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -17,13 +16,11 @@ class CeritaRakyatActivity : AppCompatActivity() {
     private lateinit var btnCerita4: Button
     private lateinit var btnCerita5: Button
 
-    private var mediaPlayer: MediaPlayer? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cerita_rakyat)
 
-        mulaiBacksound()
+        BacksoundManager.play(this, R.raw.backsound_cerita)
 
         btnBack = findViewById(R.id.btnBack)
         btnCerita1 = findViewById(R.id.btnCerita1)
@@ -33,6 +30,7 @@ class CeritaRakyatActivity : AppCompatActivity() {
         btnCerita5 = findViewById(R.id.btnCerita5)
 
         btnBack.setOnClickListener {
+            BacksoundManager.stop()
             finish()
         }
 
@@ -102,18 +100,11 @@ Pasar terapung adalah salah satu simbol terkenal dari budaya Banjar. Pasar ini t
 
 Pada masa lalu, sungai menjadi jalur utama untuk bepergian dan berdagang. Para pedagang membawa hasil kebun, buah-buahan, sayur, ikan, dan kebutuhan rumah tangga menggunakan jukung atau perahu kecil.
 
-Dari kebiasaan sederhana itu, terbentuklah kegiatan jual beli di atas air yang kemudian dikenal sebagai pasar terapung. Tradisi ini menjadi bukti kreativitas masyarakat Banjar dalam menyesuaikan kehidupan dengan lingkungan sungai.
+Dari kebiasaan sederhana itu, terbentuklah kegiatan jual beli di atas air yang kemudian dikenal sebagai pasar terapung.
                 """.trimIndent(),
                 R.drawable.pasar_terapung
             )
         }
-    }
-
-    private fun mulaiBacksound() {
-        mediaPlayer = MediaPlayer.create(this, R.raw.backsound_cerita)
-        mediaPlayer?.isLooping = true
-        mediaPlayer?.setVolume(0.45f, 0.45f)
-        mediaPlayer?.start()
     }
 
     private fun bukaDetail(
@@ -128,20 +119,15 @@ Dari kebiasaan sederhana itu, terbentuklah kegiatan jual beli di atas air yang k
         startActivity(intent)
     }
 
-    override fun onPause() {
-        super.onPause()
-        mediaPlayer?.pause()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        mediaPlayer?.start()
+    override fun onBackPressed() {
+        BacksoundManager.stop()
+        super.onBackPressed()
     }
 
     override fun onDestroy() {
+        if (isFinishing) {
+            BacksoundManager.stop()
+        }
         super.onDestroy()
-        mediaPlayer?.stop()
-        mediaPlayer?.release()
-        mediaPlayer = null
     }
 }

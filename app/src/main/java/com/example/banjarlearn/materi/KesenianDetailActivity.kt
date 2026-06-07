@@ -17,6 +17,8 @@ class KesenianDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kesenian_detail)
 
+        BacksoundManager.play(this, R.raw.backsound_kesenian)
+
         btnBack = findViewById(R.id.btnBack)
         tvJudulKesenian = findViewById(R.id.tvJudulKesenian)
         tvIsiKesenian = findViewById(R.id.tvIsiKesenian)
@@ -24,7 +26,10 @@ class KesenianDetailActivity : AppCompatActivity() {
 
         val judul = intent.getStringExtra("judul") ?: "Kesenian Banjar"
         val isi = intent.getStringExtra("isi") ?: "Isi kesenian belum tersedia."
-        val gambar = intent.getIntExtra("gambar", R.drawable.tari_baksa_kembang)
+        val gambar = intent.getIntExtra(
+            "gambar",
+            R.drawable.tari_baksa_kembang
+        )
 
         tvJudulKesenian.text = judul
         tvIsiKesenian.text = isi

@@ -1,7 +1,6 @@
 package com.example.banjarlearn.materi
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -17,13 +16,11 @@ class KesenianActivity : AppCompatActivity() {
     private lateinit var btnKesenian4: Button
     private lateinit var btnKesenian5: Button
 
-    private var mediaPlayer: MediaPlayer? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kesenian)
 
-        mulaiBacksound()
+        BacksoundManager.play(this, R.raw.backsound_kesenian)
 
         btnBack = findViewById(R.id.btnBack)
         btnKesenian1 = findViewById(R.id.btnKesenian1)
@@ -33,6 +30,7 @@ class KesenianActivity : AppCompatActivity() {
         btnKesenian5 = findViewById(R.id.btnKesenian5)
 
         btnBack.setOnClickListener {
+            BacksoundManager.stop()
             finish()
         }
 
@@ -42,7 +40,7 @@ class KesenianActivity : AppCompatActivity() {
                 """
 Tari Baksa Kembang adalah tarian tradisional Banjar yang biasanya digunakan untuk menyambut tamu kehormatan.
 
-Tarian ini dibawakan oleh penari perempuan dengan gerakan yang lembut, anggun, dan penuh makna. Penari membawa rangkaian bunga sebagai simbol penghormatan, keramahan, dan rasa bahagia masyarakat Banjar.
+Tarian ini dibawakan oleh penari perempuan dengan gerakan yang lembut, anggun, dan penuh makna.
                 """.trimIndent(),
                 R.drawable.tari_baksa_kembang
             )
@@ -54,7 +52,7 @@ Tarian ini dibawakan oleh penari perempuan dengan gerakan yang lembut, anggun, d
                 """
 Madihin merupakan seni bertutur khas Banjar yang disampaikan melalui syair, pantun, humor, dan nasihat.
 
-Biasanya Madihin dibawakan oleh seorang pamadihinan dengan iringan alat musik tarbang. Isi Madihin dapat berupa pesan moral, kritik sosial, hiburan, hingga cerita kehidupan sehari-hari masyarakat Banjar.
+Biasanya Madihin dibawakan oleh seorang pamadihinan dengan iringan alat musik tarbang.
                 """.trimIndent(),
                 R.drawable.madihin
             )
@@ -66,7 +64,7 @@ Biasanya Madihin dibawakan oleh seorang pamadihinan dengan iringan alat musik ta
                 """
 Mamanda adalah seni teater tradisional Banjar yang mengangkat kisah kerajaan, kehidupan masyarakat, dan nilai-nilai budaya.
 
-Pertunjukan Mamanda biasanya menampilkan tokoh raja, perdana menteri, putri, pengawal, dan rakyat. Ceritanya sering berisi pesan tentang keadilan dan kebijaksanaan.
+Pertunjukan Mamanda biasanya menampilkan tokoh raja, perdana menteri, putri, pengawal, dan rakyat.
                 """.trimIndent(),
                 R.drawable.mamanda
             )
@@ -78,7 +76,7 @@ Pertunjukan Mamanda biasanya menampilkan tokoh raja, perdana menteri, putri, pen
                 """
 Musik Panting adalah kesenian musik tradisional Banjar yang menggunakan alat musik petik bernama panting.
 
-Musik ini biasanya dimainkan bersama alat musik lain seperti babun, biola, gong, dan tamborin. Lagu yang dibawakan umumnya menggunakan bahasa Banjar.
+Musik ini biasanya dimainkan bersama alat musik lain seperti babun, biola, gong, dan tamborin.
                 """.trimIndent(),
                 R.drawable.musik_panting
             )
@@ -90,18 +88,11 @@ Musik ini biasanya dimainkan bersama alat musik lain seperti babun, biola, gong,
                 """
 Sinoman Hadrah adalah kesenian Banjar yang bernuansa Islami dan biasanya ditampilkan dalam acara keagamaan maupun penyambutan.
 
-Pertunjukan ini memadukan lantunan syair, tabuhan rebana, dan gerakan yang kompak. Kesenian ini menunjukkan nilai kebersamaan dan tradisi keagamaan masyarakat Banjar.
+Pertunjukan ini memadukan lantunan syair, tabuhan rebana, dan gerakan yang kompak.
                 """.trimIndent(),
                 R.drawable.sinoman_hadrah
             )
         }
-    }
-
-    private fun mulaiBacksound() {
-        mediaPlayer = MediaPlayer.create(this, R.raw.backsound_kesenian)
-        mediaPlayer?.isLooping = true
-        mediaPlayer?.setVolume(0.45f, 0.45f)
-        mediaPlayer?.start()
     }
 
     private fun bukaDetail(
@@ -116,20 +107,15 @@ Pertunjukan ini memadukan lantunan syair, tabuhan rebana, dan gerakan yang kompa
         startActivity(intent)
     }
 
-    override fun onPause() {
-        super.onPause()
-        mediaPlayer?.pause()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        mediaPlayer?.start()
+    override fun onBackPressed() {
+        BacksoundManager.stop()
+        super.onBackPressed()
     }
 
     override fun onDestroy() {
+        if (isFinishing) {
+            BacksoundManager.stop()
+        }
         super.onDestroy()
-        mediaPlayer?.stop()
-        mediaPlayer?.release()
-        mediaPlayer = null
     }
 }

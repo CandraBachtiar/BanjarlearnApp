@@ -17,6 +17,8 @@ class CeritaRakyatDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cerita_detail)
 
+        BacksoundManager.play(this, R.raw.backsound_cerita)
+
         btnBack = findViewById(R.id.btnBack)
         tvJudulCerita = findViewById(R.id.tvJudulCerita)
         tvIsiCerita = findViewById(R.id.tvIsiCerita)
